@@ -92,7 +92,7 @@ router.delete('/:id', (req, res) => {
         id: req.params.id
     }
    }).then(dbCategory => {
-    if (!dbCategory[0]) {
+    if (!dbCategory) {
        // if page not found
         res.status(404).json({ message: 'Unable to find a category with this id' });
         return;

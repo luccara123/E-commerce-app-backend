@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
         res.status(404).json({ message: 'Unable to find the products' });
         return;
     }
-    res.json(dbTag);
+    res.json(dbProduct);
   })
   .catch(err => {
     // if there's an error with the server
